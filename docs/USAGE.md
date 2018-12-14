@@ -4,24 +4,7 @@
 
 #### Installation
 
-Install the ``TDF`` class by copying the Apex code or using the Ant Migration Tool
-
-The ``TDF`` class is provided with a test class ``TDFTest``
-
-You can install only the ``TDF`` class and add the ``@isTest`` annotation on it, in order to exclude it from the organization code size limit 
-
-#### Configure TDF Class 
-
-This configuration is related to orgs that have Person Account enabled 
-
-  ```apex
-public class TDF {
-
-	// Org config
-	// ==========================================================================
-	private static final Boolean PERSON_ACCOUNT_IS_ENABLED = true | false;
-	// ==========================================================================
-  ```
+Get the ``TDF`` class by installing the [TDF Unmanaged Package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000021jWV&isdtp=p1) on your org
 
 ## Next
 

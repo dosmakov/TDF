@@ -1,7 +1,7 @@
 # Apex Test Data Factory
 
 
-<p align="center"><img src ="/docs/assets/TDF.png" width="500"/></p>
+<p align="center"><img src ="/docs/assets/TDF.png" width="400"/></p>
 
 
 
@@ -10,7 +10,7 @@
 
 Generate & insert an sObject with all the required fields & relationships auto-filled
   ```apex
-  Contact con = (Contact)TDF.createSObject('Contact',true);
+  Contact con = (Contact)TDF.createSObject('Contact');
   ```
 
 Inserted data*:
@@ -25,7 +25,7 @@ Assign values to fields of the main sObject and the related sObjects
   Contact con = (Contact)TDF.createSObject('Contact', new Map<String,Object>{
     'Email' => 'test@email.com',
     'Account.Description' => 'Text for the Description field on the Account'
-  },true);
+  });
   ```
  
 Inserted data*:
@@ -38,6 +38,17 @@ Inserted data*:
 
 
   \* *in a vanilla org*
+  
+  
+  ### Install :
+  Click on the package image to access the *TDF* Unmanaged Package
+  
+  <p align="center">
+    <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1n0000021jWV&isdtp=p1">
+      <img src ="/docs/assets/package.png" width="80"/>
+    </a>
+  </p>
+
   
   ### More :
 * [Usage](/docs/USAGE.md)

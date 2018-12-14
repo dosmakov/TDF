@@ -28,11 +28,11 @@ public class MyDefaultValueProvider extends TDF.DefaultValueProvider{
 | Salesforce    Datatype | Method                       | Default value for the creation of a single sObject               | Default value for the creation of a list of sObject |
 |------------------------|------------------------------|------------------------------------------------------------------|-----------------------------------------------------|
 | Base64                 | getBase64DefaultValue        | Blob.valueOf(0)                                                  | Blob.valueOf(recordIndex)                           |
-| Checkbox               | getCheckboxDefaultValue      | True                                                             | //                                                  |
+| Checkbox               | getCheckboxDefaultValue      | False                                                            | //                                                  |
 | Currency               | getCurrencyDefaultValue      | 0                                                                | recordIndex                                         |
 | Date                   | getDateDefaultValue          | Date.today()                                                     | //                                                  |
 | DateTime               | getDateTimeDefaultValue      | Datetime.now()                                                   | //                                                  |
-| Email                  | getEmailDefaultValue         | 'test0@email.com'                                                | 'test'+recordIndex+'@email.com'                     |
+| Email                  | getEmailDefaultValue         | 'test0@example.com'                                              | 'test'+recordIndex+'@example.com'                   |
 | Geolocation            | getGeolocationDefaultValue   | Location.newInstance(0,0)                                        | //                                                  |
 | Number                 | getNumberDefaultValue        | 0                                                                | recordIndex                                         |
 | Percent                | getPercentDefaultValue       | 0                                                                | recordIndex                                         |
@@ -81,7 +81,7 @@ public class MyDefaultValueProvider extends TDF.DefaultValueProvider{
 }
   ```  
   
-Use your custom default value provider class
+Using your custom default value provider class
   
 **Apply it to the current transaction**:
   
